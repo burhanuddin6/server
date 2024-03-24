@@ -6,6 +6,7 @@ from .models import Candidates
 from .models import Salaries
 from .models import Jobs
 from .models import AccountTypes
+
 # Create your models here.
 class Users(models.Model):
     user_id = models.AutoField(primary_key=True)

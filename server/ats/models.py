@@ -115,5 +115,16 @@ class CandidateJobScreenRelations(models.Model):
     job_screen_id = models.ForeignKey(JobScreens, on_delete=models.CASCADE, null = False)
     is_screen_passed = models.BooleanField(null = False)
 
+class CandidateInterviews(models.Model):
+    canditate_interview_id = models.AutoField(primary_key=True)
+    candidate_application_id = models.ForeignKey(CandidateApplications, on_delete=models.CASCADE, null = False)
+    job_screen_interview_id = models.ForeignKey(JobScreenInterviews, on_delete=models.CASCADE, null = False)
+    interview_date = models.DateTimeField(null = False)
+    interview_time = models.TimeField(null = False)
+    candidate_application_id = models.ForeignKey(CandidateApplications, on_delete=models.CASCADE, null = False)
 
 
+class Remarks(models.Model):
+    remark_id = models.AutoField(primary_key=True)
+    candidate_job_screen_relation_id = models.ForeignKey(CandidateJobScreenRelations, on_delete=models.CASCADE, null = False)
+    recruiter_id = models.ForeignKey(Recruiters, on_delete=models.CASCADE, null = False)

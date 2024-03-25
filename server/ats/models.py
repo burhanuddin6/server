@@ -1,16 +1,10 @@
 from django.db import models
-from .models import Organizations
-from .models import Recruiters
-from .models import Users
-from .models import Candidates
-from .models import Salaries
-from .models import Jobs
-from .models import AccountTypes
+
 
 # Create your models here.
 class Users(models.Model):
     user_id = models.AutoField(primary_key=True)
-    account_type_id = models.ForeignKey(AccountTypes, on_delete=models.CASCADE)
+    account_type_id = models.ForeignKey("AccountTypes", on_delete=models.CASCADE)
     first_name = models.CharField(max_length=256)
     last_name = models.CharField(max_length=256)
     profile_picture = models.CharField(max_length=256, null = False)
@@ -39,16 +33,16 @@ class NotificationTypes(models.Model):
     account_type_id = models.ForeignKey(AccountTypes, on_delete=models.CASCADE)
 
 
-class Recruiters(models.Model):
-    recruiter_id = models.AutoField(primary_key=True)
-    org_id = models.ForeignKey(Organizations, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-
-
 class Organizations(models.Model):
     org_id = models.CharField(max_length=16, primary_key=True)
     org_name = models.CharField(max_length=64)
-    admin_id = models.ForeignKey(Recruiters, on_delete=models.CASCADE)
+    admin_id = models.ForeignKey("Recruiters", on_delete=models.CASCADE)
+
+class Recruiters(models.Model):
+    recruiter_id = models.AutoField(primary_key=True)
+    org_id = models.ForeignKey(Organizations, on_delete=models.CASCADE)
+    user_id = models.ForeignKey("Users", on_delete=models.CASCADE)
+
 
 
 class Candidates(models.Model):

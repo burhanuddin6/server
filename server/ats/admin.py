@@ -18,5 +18,3 @@ admin.site.register(CandidateApplications)
 admin.site.register(CandidateJobScreenRelations)
 admin.site.register(CandidateInterviews)
 admin.site.register(Remarks)
-
-

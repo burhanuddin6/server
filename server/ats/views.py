@@ -1,93 +1,96 @@
 # from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Users, AccountTypes, Notifications, NotificationTypes, Recruiters, Organizations, Candidates, Salaries, Jobs, JobScreens, JobScreenInterviews, ProfileScore, CandidateApplications, CandidateJobScreenRelations, CandidateInterviews, Remarks
-from .serializer import UsersSerializer, AccountTypesSerializer, NotificationsSerializer, NotificationTypesSerializer, RecruitersSerializer, OrganizationsSerializer, CandidatesSerializer, SalariesSerializer, JobsSerializer, JobScreensSerializer, JobScreenInterviewsSerializer, ProfileScoreSerializer, CandidateApplicationsSerializer, CandidateJobScreenRelationsSerializer, CandidateInterviewsSerializer, RemarksSerializer
-# Create your views here.
 
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = Users.objects.all().order_by('user_id')
-    serializer_class = UsersSerializer
+from .models import AccountType, Notification, NotificationType, \
+Recruiter, Organization, Candidate, Salary, Job, JobScreen, \
+JobScreenInterview, ProfileScore, CandidateApplication, \
+CandidateJobScreenRelation, CandidateInterview, Remark
 
+from .serializer import AccountTypeSerializer, NotificationSerializer, \
+NotificationTypeSerializer, RecruiterSerializer, OrganizationSerializer, \
+CandidateSerializer, SalarySerializer, JobSerializer, JobScreenSerializer, \
+JobScreenInterviewSerializer, ProfileScoreSerializer, \
+CandidateApplicationSerializer, CandidateJobScreenRelationSerializer, \
+CandidateInterviewSerializer, RemarkSerializer
 
-class AccountTypesViewSet(viewsets.ModelViewSet):
+class AccountTypeViewSet(viewsets.ModelViewSet):
+    '''Default viewset for AccountType model.'''
+    queryset = AccountType.objects.all().order_by('account_type_id')
+    serializer_class = AccountTypeSerializer
 
-    queryset = AccountTypes.objects.all().order_by('account_type_id')
-    serializer_class = AccountTypesSerializer
+class NotificationViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Notification model.'''
+    queryset = Notification.objects.all().order_by('notif_id')
+    serializer_class = NotificationSerializer
 
-class NotificationsViewSet(viewsets.ModelViewSet):
+class NotificationTypeViewSet(viewsets.ModelViewSet):
+    '''Default viewset for NotificationType model.'''
+    queryset = NotificationType.objects.all().order_by('notif_type_id')
+    serializer_class = NotificationTypeSerializer
 
-    queryset = Notifications.objects.all().order_by('notif_id')
-    serializer_class = NotificationsSerializer
-
-class NotificationTypesViewSet(viewsets.ModelViewSet):
     
-    queryset = NotificationTypes.objects.all().order_by('notif_type_id')
-    serializer_class = NotificationTypesSerializer
+class RecruiterViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Recruiter model.'''
+    queryset = Recruiter.objects.all().order_by('recruiter_id')
+    serializer_class = RecruiterSerializer
 
-    
-class RecruitersViewSet(viewsets.ModelViewSet):
-        
-    queryset = Recruiters.objects.all().order_by('recruiter_id')
-    serializer_class = RecruitersSerializer
+class OrganizationViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Organization model.'''
+    queryset = Organization.objects.all().order_by('org_id')
+    serializer_class = OrganizationSerializer
 
-class OrganizationsViewSet(viewsets.ModelViewSet):
-                
-    queryset = Organizations.objects.all().order_by('org_id')
-    serializer_class = OrganizationsSerializer
+class CandidateViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Candidate model.'''
+    queryset = Candidate.objects.all().order_by('candidate_id')
+    serializer_class = CandidateSerializer   
 
-class CandidatesViewSet(viewsets.ModelViewSet):
-
-    queryset = Candidates.objects.all().order_by('candidate_id')
-    serializer_class = CandidatesSerializer   
-
-class SalariesViewSet(viewsets.ModelViewSet):
-
-    queryset = Salaries.objects.all().order_by('salary_id')
-    serializer_class = SalariesSerializer
+class SalaryViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Salary model.'''
+    queryset = Salary.objects.all().order_by('salary_id')
+    serializer_class = SalarySerializer
 
 class JobsViewSet(viewsets.ModelViewSet):
-    
-    queryset = Jobs.objects.all().order_by('job_id')
-    serializer_class = JobsSerializer
+    '''Default viewset for Job model.'''
+    queryset = Job.objects.all().order_by('job_id')
+    serializer_class = JobSerializer
 
-class JobScreensViewSet(viewsets.ModelViewSet):
-        
-    queryset = JobScreens.objects.all().order_by('job_screen_id')
-    serializer_class = JobScreensSerializer
+class JobScreenViewSet(viewsets.ModelViewSet):
+    '''Default viewset for JobScreen model.'''
+    queryset = JobScreen.objects.all().order_by('job_screen_id')
+    serializer_class = JobScreenSerializer
 
-class JobScreenInterviewsViewSet(viewsets.ModelViewSet):
-                
-    queryset = JobScreenInterviews.objects.all().order_by('job_screen_interview_id')
-    serializer_class = JobScreenInterviewsSerializer
+class JobScreenInterviewViewSet(viewsets.ModelViewSet):
+    '''Default viewset for JobScreenInterview model.'''
+    queryset = JobScreenInterview.objects.all().order_by('job_screen_interview_id')
+    serializer_class = JobScreenInterviewSerializer
 
 
 class ProfileScoreViewSet(viewsets.ModelViewSet):
-    
+    '''Defualt viewset for ProfileScore model'''
     queryset = ProfileScore.objects.all().order_by('profile_score_id')
     serializer_class = ProfileScoreSerializer
 
-class CandidateApplicationsViewSet(viewsets.ModelViewSet):
-            
-    queryset = CandidateApplications.objects.all().order_by('candidate_id')
-    serializer_class = CandidateApplicationsSerializer
+class CandidateApplicationViewSet(viewsets.ModelViewSet):
+    '''Defualt viewset for CandidateApplication viewset'''
+    queryset = CandidateApplication.objects.all().order_by('candidate_id')
+    serializer_class = CandidateApplicationSerializer
 
 
-class CandidateJobScreenRelationsViewSet(viewsets.ModelViewSet):
-                    
-    queryset = CandidateJobScreenRelations.objects.all().order_by('id')
-    serializer_class = CandidateJobScreenRelationsSerializer
+class CandidateJobScreenRelationViewSet(viewsets.ModelViewSet):
+    '''Defualt viewset for CandidateJobScreenRelation viewset'''
+    queryset = \
+    CandidateJobScreenRelation.objects.all().order_by('id')
+    serializer_class = CandidateJobScreenRelationSerializer
 
 
-class CandidateInterviewsViewSet(viewsets.ModelViewSet):
-                        
-    queryset = CandidateInterviews.objects.all().order_by('canditate_interview_id')
-    serializer_class = CandidateInterviewsSerializer
+class CandidateInterviewViewSet(viewsets.ModelViewSet):
+    '''Default viewset for CandidateInterview model.'''
+    queryset = \
+    CandidateInterview.objects.all().order_by('canditate_interview_id')
+    serializer_class = CandidateInterviewSerializer
 
 
-class RemarksViewSet(viewsets.ModelViewSet):
-                                
-    queryset = Remarks.objects.all().order_by('remark_id')
-    serializer_class = RemarksSerializer
+class RemarkViewSet(viewsets.ModelViewSet):
+    '''Default viewset for Remark model'''
+    queryset = Remark.objects.all().order_by('remark_id')
+    serializer_class = RemarkSerializer

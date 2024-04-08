@@ -1,0 +1,101 @@
+[
+    {
+        "model": "ats.AccountType",
+        "fields": {
+            "account_type": "superadmin"
+        }
+    },
+    {
+        "model": "ats.AccountType",
+        "fields": {
+            "account_type": "admin"
+        }
+    },
+    {
+        "model": "ats.AccountType",
+        "fields": {
+            "account_type": "member"
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Password Reset",
+            "description": "Notification for password reset request",
+            "template": "You have requested to reset your password. Click <a href='{{ reset_link }}'>here</a> to reset your password.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Account Created",
+            "description": "Notification for account creation",
+            "template": "Your account has been created. Your username is {{ username }}.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Account Updated",
+            "description": "Notification for account updates",
+            "template": "Your account has been updated.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Account Deleted",
+            "description": "Notification for account deletion",
+            "template": "Your account has been deleted.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Account Unlocked",
+            "description": "Notification for account unlock",
+            "template": "Your account has been unlocked.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Payment Received",
+            "description": "Notification for received payments",
+            "template": "You have received a payment of ${{ amount }} from {{ sender_name }}.",
+            "is_email_notif": 1
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Event Reminder",
+            "description": "Notification for event reminders",
+            "template": "Reminder: You have an upcoming event on {{ event_date }}.",
+            "is_email_notif": 0
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields":{
+            "name": "Invite Accepted",
+            "description": "Notification for accepted invites",
+            "template": "{{ invitee_name }} has accepted your invite.",
+            "is_email_notif": 0
+        }
+    },
+    {
+        "model": "ats.NotificationType",
+        "fields": {
+            "name": "Task Created",
+            "description": "Notification for created tasks",
+            "template": "{{ assignee_name }} has assigned you a new task: {{ task_name }}.",
+            "is_email_notif": 0
+        }
+    }
+]

@@ -1,0 +1,2 @@
+Verify your email address by clicking on this link:
+    bad_url.com/signupverify.html/?code={{ code }}

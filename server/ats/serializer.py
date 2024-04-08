@@ -1,83 +1,81 @@
 from rest_framework import serializers
-from .models import Users
-from .models import AccountTypes
-from .models import Notifications
-from .models import NotificationTypes, Recruiters, Organizations, Candidates, Salaries, Jobs, JobScreens, JobScreenInterviews, ProfileScore, CandidateApplications, CandidateJobScreenRelations, CandidateInterviews, Remarks
 
-class UsersSerializer(serializers.ModelSerializer):
-    "Users serializer"
+from .models import User, AccountType, Notification, NotificationType, Recruiter, Organization, Candidate, Salary, Job, JobScreen, JobScreenInterview, ProfileScore, CandidateApplication, CandidateJobScreenRelation, CandidateInterview, Remark
+
+# class UserSerializer(serializers.ModelSerializer):
+#     "User serializer"
+#     class Meta:
+#         model = User
+#         fields = '__all__'
+
+
+class AccountTypeSerializer(serializers.ModelSerializer):
+    "AccountType serializer"
     class Meta:
-        model = Users
+        model = AccountType
         fields = '__all__'
 
 
-class AccountTypesSerializer(serializers.ModelSerializer):
-    "AccountTypes serializer"
+class NotificationSerializer(serializers.ModelSerializer):
+    "Notification serializer"
     class Meta:
-        model = AccountTypes
-        fields = '__all__'
-
-
-class NotificationsSerializer(serializers.ModelSerializer):
-    "Notifications serializer"
-    class Meta:
-        model = Notifications
+        model = Notification
         fields = '__all__'
 
     
-class NotificationTypesSerializer(serializers.ModelSerializer):
-    "NotificationTypes serializer"
+class NotificationTypeSerializer(serializers.ModelSerializer):
+    "NotificationType serializer"
     class Meta:
-        model = NotificationTypes
+        model = NotificationType
         fields = '__all__'
 
 
-class RecruitersSerializer(serializers.ModelSerializer):
-    "Recruiters serializer"
+class RecruiterSerializer(serializers.ModelSerializer):
+    "Recruiter serializer"
     class Meta:
-        model = Recruiters
+        model = Recruiter
         fields = '__all__'
 
 
-class OrganizationsSerializer(serializers.ModelSerializer):
-    "Organizations serializer"
+class OrganizationSerializer(serializers.ModelSerializer):
+    "Organization serializer"
     class Meta:
-        model = Organizations
+        model = Organization
         fields = '__all__'
 
 
-class CandidatesSerializer(serializers.ModelSerializer):
-    "Candidates serializer"
+class CandidateSerializer(serializers.ModelSerializer):
+    "Candidate serializer"
     class Meta:
-        model = Candidates
+        model = Candidate
         fields = '__all__'
 
 
-class SalariesSerializer(serializers.ModelSerializer):
-    "Salaries serializer"
+class SalarySerializer(serializers.ModelSerializer):
+    "Salary serializer"
     class Meta:
-        model = Salaries
+        model = Salary
         fields = '__all__'
 
 
-class JobsSerializer(serializers.ModelSerializer):
-    "Jobs serializer"
+class JobSerializer(serializers.ModelSerializer):
+    "Job serializer"
     class Meta:
-        model = Jobs
+        model = Job
         fields = '__all__'
 
 
-class JobScreensSerializer(serializers.ModelSerializer):
-    "JobScreens serializer"
+class JobScreenSerializer(serializers.ModelSerializer):
+    "JobScreen serializer"
     class Meta:
-        model = JobScreens
+        model = JobScreen
         fields = '__all__'
 
 
-class JobScreenInterviewsSerializer(serializers.ModelSerializer):
-    "JobScreenInterviews serializer"
+class JobScreenInterviewSerializer(serializers.ModelSerializer):
+    "JobScreenInterview serializer"
     class Meta:
-        model = JobScreenInterviews
+        model = JobScreenInterview
         fields = '__all__'
 
 
@@ -88,32 +86,32 @@ class ProfileScoreSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     
-class CandidateApplicationsSerializer(serializers.ModelSerializer):
+class CandidateApplicationSerializer(serializers.ModelSerializer):
     "CandidateApplications serializer"
     class Meta:
-        model = CandidateApplications
+        model = CandidateApplication
         fields = '__all__'
 
 
-class CandidateJobScreenRelationsSerializer(serializers.ModelSerializer):
+class CandidateJobScreenRelationSerializer(serializers.ModelSerializer):
 
-    "CandidateJobScreenRelations serializer"
+    "CandidateJobScreenRelation serializer"
     class Meta:
-        model = CandidateJobScreenRelations
+        model = CandidateJobScreenRelation
         fields = '__all__'
 
 
-class CandidateInterviewsSerializer(serializers.ModelSerializer):
-    "CandidateInterviews serializer"
+class CandidateInterviewSerializer(serializers.ModelSerializer):
+    "CandidateInterview serializer"
     class Meta:
-        model = CandidateInterviews
+        model = CandidateInterview
         fields = '__all__'
 
 
-class RemarksSerializer(serializers.ModelSerializer):
-    "Remarks serializer"
+class RemarkSerializer(serializers.ModelSerializer):
+    "Remark serializer"
     class Meta:
-        model = Remarks
+        model = Remark
         fields = '__all__'
 
 

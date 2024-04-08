@@ -1,5 +1,4 @@
 from django.db import models
-import pytz
 
 from authemail.models import EmailUserManager, EmailAbstractUser
 

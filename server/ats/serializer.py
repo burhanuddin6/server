@@ -1,6 +1,9 @@
 from rest_framework import serializers
 
-from .models import User, AccountType, Notification, NotificationType, Recruiter, Organization, Candidate, Salary, Job, JobScreen, JobScreenInterview, ProfileScore, CandidateApplication, CandidateJobScreenRelation, CandidateInterview, Remark
+from .models import AccountType, Notification, NotificationType, Recruiter, \
+Organization, Candidate, Salary, Job, JobScreen, JobScreenInterview, \
+ProfileScore, CandidateApplication, CandidateJobScreenRelation, \
+CandidateInterview, Remark
 
 # class UserSerializer(serializers.ModelSerializer):
 #     "User serializer"
@@ -113,5 +116,3 @@ class RemarkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Remark
         fields = '__all__'
-
-

@@ -1,6 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import AccountTypeViewSet, NotificationViewSet, NotificationTypeViewSet, RecruiterViewSet, OrganizationViewSet, CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, JobScreenInterviewViewSet, ProfileScoreViewSet, CandidateApplicationViewSet, CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet
+from .views import AccountTypeViewSet, NotificationViewSet, \
+NotificationTypeViewSet, RecruiterViewSet, OrganizationViewSet, \
+CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, \
+JobScreenInterviewViewSet, ProfileScoreViewSet, CandidateApplicationViewSet, \
+CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet
 
 router = DefaultRouter()
 router.register(r'account_types', AccountTypeViewSet)

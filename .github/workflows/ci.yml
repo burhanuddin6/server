@@ -36,6 +36,6 @@ jobs:
             -u be07724@st.habib.edu.pk \
             -p TestrailAdmin@9 \
             parse_junit \
-            --title "Automated Tests from GitHub workflow" \
+            --title "GithubTestRun" \
             --run-description ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} \
             -f "junit-report.xml"

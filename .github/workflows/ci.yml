@@ -31,10 +31,10 @@ jobs:
         run: |
           pip install trcli
           trcli -y \
-            -h https://seproject6.testrail.io/ \
+            -h https://blendhr.testrail.io/ \
             --project "Applicant Tracking System" \
             -u be07724@st.habib.edu.pk \
-            -p TestrailAdmin@9 \
+            -p Testadmin@9 \
             parse_junit \
             -f "TEST*.xml" \
             --title "GithubTestRun" \

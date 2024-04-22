@@ -36,7 +36,7 @@ jobs:
             -u be07724@st.habib.edu.pk \
             -p TestrailAdmin@9 \
             parse_junit \
-            -f "./TEST*" \
+            -f "TEST*.xml" \
             --title "GithubTestRun" \
             --run-description ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} \
             

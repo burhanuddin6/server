@@ -38,4 +38,4 @@ jobs:
             parse_junit \
             --title "GithubTestRun" \
             --run-description ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} \
-            -f "*" \
+            -f "reports/*" \

@@ -32,9 +32,6 @@ class AccountType(models.Model):
     def __str__(self):
         return self.account_type
     
-    
-
-
 class Notification(models.Model):
     "The notification that are sent to the user."
     notif_id = models.AutoField(primary_key=True)
@@ -42,7 +39,7 @@ class Notification(models.Model):
     creation_date = models.DateTimeField(null = False)
     creation_time = models.TimeField(null = False)
     additional_info = models.TextField(null = False)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_id = models.ForeignKey("User", on_delete=models.CASCADE, default=None)
 
 class NotificationType(models.Model):
     "The types of notification that can be sent to user."
@@ -68,11 +65,9 @@ class Recruiter(models.Model):
     user_id = models.ForeignKey("User", on_delete=models.CASCADE)
 
 
-
 class Candidate(models.Model):
     "Candidate that are applying for jobs."
     candidate_id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.CharField(max_length=64, null = False)
     country = models.CharField(max_length=64, null = False)
     phone = models.CharField(max_length=64)

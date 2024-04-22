@@ -1,5 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from django.contrib.auth import views as auth_views
 from .views import AccountTypeViewSet, NotificationViewSet, \
 NotificationTypeViewSet, RecruiterViewSet, OrganizationViewSet, \
 CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, \
@@ -27,7 +28,7 @@ router.register(r'remarks', RemarkViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     # bootstrapping authentication: powerful, but not the focus of this project
     path('api/accounts/', include('authemail.urls')),
 ]

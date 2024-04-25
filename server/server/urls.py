@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+# Add URL maps to redirect the base URL to our application``
+
 ###############################################################################1
 
 urlpatterns += [

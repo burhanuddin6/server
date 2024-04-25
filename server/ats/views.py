@@ -39,7 +39,7 @@ class NotificationTypeViewSet(viewsets.ModelViewSet):
     '''Default viewset for NotificationType model.'''
     queryset = NotificationType.objects.all().order_by('notif_type_id')
     serializer_class = NotificationTypeSerializer
-
+    
     
 class RecruiterViewSet(viewsets.ModelViewSet):
     '''Default viewset for Recruiter model.'''

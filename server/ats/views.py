@@ -1,5 +1,8 @@
 # from django.shortcuts import render
 from rest_framework import viewsets
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 from .models import AccountType, Notification, NotificationType, \
 Recruiter, Organization, Candidate, Salary, Job, JobScreen, \
@@ -12,6 +15,15 @@ CandidateSerializer, SalarySerializer, JobSerializer, JobScreenSerializer, \
 JobScreenInterviewSerializer, ProfileScoreSerializer, \
 CandidateApplicationSerializer, CandidateJobScreenRelationSerializer, \
 CandidateInterviewSerializer, RemarkSerializer
+
+from .models import CandidateApplication
+from .serializer import CandidateApplicationSerializer
+
+class CandidateApplicationDetailView(APIView):
+    def get(self, request, pk, format=None):
+        application = get_object_or_404(CandidateApplication, pk=pk)
+        serializer = CandidateApplicationSerializer(application)
+        return Response(serializer.data)
 
 class AccountTypeViewSet(viewsets.ModelViewSet):
     '''Default viewset for AccountType model.'''

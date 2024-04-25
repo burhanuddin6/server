@@ -55,24 +55,14 @@ class NotificationType(models.Model):
 class Organization(models.Model):
     "The organization that are using the ATS."
     org_id = models.CharField(max_length=16, primary_key=True)
-    org_name = models.CharField(max_length=64)
-    admin_id = models.ForeignKey("Recruiter", on_delete=models.CASCADE)
+    org_name = models.CharField(max_length=64, unique=True, null = False)
 
 class Recruiter(models.Model):
     "Recruiter that are part of the organization."
     recruiter_id = models.AutoField(primary_key=True)
-    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE)
-    user_id = models.ForeignKey("User", on_delete=models.CASCADE)
+    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE, to_field='org_name', unique=True)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
-
-class Candidate(models.Model):
-    "Candidate that are applying for jobs."
-    candidate_id = models.AutoField(primary_key=True)
-    email = models.CharField(max_length=64, null = False)
-    country = models.CharField(max_length=64, null = False)
-    phone = models.CharField(max_length=64)
-    country = models.CharField(max_length=64, null = False)
-    linkedin_url = models.CharField(max_length=256, null = False)
 
 
 class Salary(models.Model):
@@ -85,8 +75,8 @@ class Salary(models.Model):
 class Job(models.Model):
     "The jobs that are posted by the recruiter."
     job_id = models.AutoField(primary_key=True)
-    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE, null = False)
-    creater_id = models.ForeignKey(Recruiter, on_delete=models.CASCADE, null = False)
+    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE, null = False, to_field='org_name')
+    creater_id = models.ForeignKey(Recruiter, on_delete=models.CASCADE, null = False, to_field='recruiter_id')
     job_title = models.CharField(max_length=64, null = False)
     overview = models.CharField(max_length = 1024)
     responsibilities = models.CharField(max_length = 1024)
@@ -96,6 +86,18 @@ class Job(models.Model):
     is_open = models.BooleanField(null = False)
     posted_on = models.DateTimeField(null = False)
     salary = models.ForeignKey(Salary, on_delete=models.CASCADE, null = False)
+
+class Candidate(models.Model):
+    "Candidate that are applying for jobs."
+    candidate_id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=64, null = True)
+    last_name = models.CharField(max_length=64, null = True)
+    email = models.CharField(max_length=64, null = False)
+    country = models.CharField(max_length=64, null = False)
+    phone = models.CharField(max_length=64)
+    linkedin_url = models.CharField(max_length=256, null = False)
+
+
 
 class JobScreen(models.Model):
     "The screens that are part of the job application process."
@@ -128,6 +130,7 @@ class CandidateApplication(models.Model):
     job_id = models.ForeignKey(Job, on_delete=models.CASCADE, null = False)
     profile_score_id = models.ForeignKey(ProfileScore, on_delete=models.CASCADE, null = False)
     resume_file = models.CharField(max_length=256, null = False)
+
 
 
 class CandidateJobScreenRelation(models.Model):

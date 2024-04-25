@@ -7,6 +7,9 @@ CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, \
 JobScreenInterviewViewSet, ProfileScoreViewSet, CandidateApplicationViewSet, \
 CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet
 
+from .views import CandidateApplicationDetailView
+
+
 router = DefaultRouter()
 router.register(r'account_types', AccountTypeViewSet)
 router.register(r'notifications', NotificationViewSet)
@@ -27,8 +30,10 @@ router.register(r'remarks', RemarkViewSet)
 
 
 
+
 urlpatterns = [
     path('api/', include(router.urls)),
     # bootstrapping authentication: powerful, but not the focus of this project
     path('api/accounts/', include('authemail.urls')),
+    path('api/candidate_applications_detail/<int:pk>/', CandidateApplicationDetailView.as_view(), name='candidate_application_detail'),
 ]

@@ -156,8 +156,8 @@ EMAIL_FROM = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_FROM') or 'BlendHR'
 EMAIL_BCC = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_BCC') or 'ahmedshoaib.genius229@gmail.com'
 
 EMAIL_HOST =  'smtp.gmail.com'
-EMAIL_HOST_USER =  'ahmedshoaib.genius229@gmail.com'
-EMAIL_HOST_PASSWORD =  'zyddjgrpbxyunltm'
+EMAIL_HOST_USER =  'ba09ae@gmail.com'
+EMAIL_HOST_PASSWORD =  'qojchhlyvlnbplhw'
 
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False

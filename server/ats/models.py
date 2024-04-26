@@ -60,7 +60,7 @@ class Organization(models.Model):
 class Recruiter(models.Model):
     "Recruiter that are part of the organization."
     recruiter_id = models.AutoField(primary_key=True)
-    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE, to_field='org_name', unique=True)
+    org_id = models.OneToOneField(Organization, on_delete=models.CASCADE, null = False)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
 

@@ -45,7 +45,7 @@ class NotificationType(models.Model):
 
 class Organization(models.Model):
     "The organization that are using the ATS."
-    org_id = models.CharField(max_length=16, primary_key=True)
+    org_id = models.AutoField(primary_key=True)
     org_name = models.CharField(max_length=64, unique=True, null = False)
 
 class Recruiter(models.Model):

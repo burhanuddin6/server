@@ -51,7 +51,7 @@ class Organization(models.Model):
 class Recruiter(models.Model):
     "Recruiter that are part of the organization."
     recruiter_id = models.AutoField(primary_key=True)
-    org_id = models.OneToOneField(Organization, on_delete=models.CASCADE, null = False)
+    org_id = models.OneToOneField(Organization, on_delete=models.CASCADE,to_field='org_id', null = False)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
@@ -66,18 +66,14 @@ class Salary(models.Model):
 class Job(models.Model):
     "The jobs that are posted by the recruiter."
     job_id = models.AutoField(primary_key=True)
-    org_id = models.ForeignKey(Organization, on_delete=models.CASCADE, null = False, to_field='org_name')
     creater_id = models.ForeignKey(Recruiter, on_delete=models.CASCADE, null = False, to_field='recruiter_id')
     job_title = models.CharField(max_length=64, null = False)
-    overview = models.CharField(max_length = 1024)
-    responsibilities = models.CharField(max_length = 1024)
-    qualifications = models.CharField(max_length = 1024)
+    overview = models.CharField(max_length = 5000)
     work_site = models.CharField(max_length=64, null = False)
     work_type = models.CharField(max_length=64, null = False)
     is_open = models.BooleanField(null = False)
     posted_on = models.DateTimeField(null = False)
-    salary = models.ForeignKey(Salary, on_delete=models.CASCADE, null = False)
-
+    
 class Candidate(models.Model):
     "Candidate that are applying for jobs."
     candidate_id = models.AutoField(primary_key=True)

@@ -9,15 +9,6 @@ from authemail.models import EmailUserManager, EmailAbstractUser
 class User(EmailAbstractUser):
     "The user that are part of the ATS."
     objects = EmailUserManager()
-    # user_id = models.AutoField(primary_key=True)
-    # account_type_id = models.ForeignKey("AccountType", on_delete=models.CASCADE)
-    # first_name = models.CharField(max_length=256)
-    # last_name = models.CharField(max_length=256)
-    # profile_picture = models.ImageField(upload_to='profile_pictures/', null = True)
-    # timezone = models.CharField(
-    #     max_length=64,
-    #     choices=[(tz, tz) for tz in pytz.all_timezones]
-    # )
 
 
 class AccountType(models.Model):
@@ -96,7 +87,8 @@ class Candidate(models.Model):
     country = models.CharField(max_length=64, null = False)
     phone = models.CharField(max_length=64)
     linkedin_url = models.CharField(max_length=256, null = False)
-
+    def __str__(self) -> str:
+        return str(self.candidate_id)
 
 
 class JobScreen(models.Model):
@@ -122,14 +114,19 @@ class ProfileScore(models.Model):
     profile_score_id = models.AutoField(primary_key=True)
     resume_score = models.IntegerField(null = False)
     relevance_score = models.IntegerField(null = False)
+    candidate_application_id = models.ForeignKey("CandidateApplication", on_delete=models.CASCADE, null = False)
+
+import os
+def resume_filename(instance, filename):
+    _, ext = os.path.splitext(filename)
+    return f'resumes/{instance.candidate_id}{ext}'
 
 class CandidateApplication(models.Model):
     "The applications that the candidate have submitted."
     application_id = models.AutoField(primary_key=True)
     candidate_id = models.ForeignKey(Candidate, on_delete=models.CASCADE, null = False)
     job_id = models.ForeignKey(Job, on_delete=models.CASCADE, null = False)
-    profile_score_id = models.ForeignKey(ProfileScore, on_delete=models.CASCADE, null = False)
-    resume_file = models.CharField(max_length=256, null = False)
+    resume_file = models.FileField(upload_to=resume_filename, null = False)
 
 
 

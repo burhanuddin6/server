@@ -106,3 +106,27 @@ class RemarkViewSet(viewsets.ModelViewSet):
     '''Default viewset for Remark model'''
     queryset = Remark.objects.all().order_by('remark_id')
     serializer_class = RemarkSerializer
+
+# a one of view to create candidate application and their account
+# the data will have all the information including resume 
+# and the job id to which the candidate is applying
+
+# import fileuplaod parser
+from rest_framework.parsers import FileUploadParser
+class CreateCandidateApplication(APIView):
+    parser_classes = (FileUploadParser,)
+    def post(self, request, format=None):
+        resume = request.FILES['resume']
+        data = request.data
+        candidate_serializer = CandidateSerializer(data=data)
+        application_serializer = CandidateApplicationSerializer(data=data)
+        # save resume file in media root
+        with open('media/' + resume.name, 'wb+') as destination:
+            for chunk in resume.chunks():
+                destination.write(chunk)
+        if candidate_serializer.is_valid() and application_serializer.is_valid():
+            candidate = candidate_serializer.save()
+            application = application_serializer.save()
+            return Response({'candidate_id': candidate.candidate_id, 'application_id': application.application_id})
+        return Response({'error': 'Invalid data'})
+         

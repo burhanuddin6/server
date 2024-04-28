@@ -165,3 +165,7 @@ EMAIL_USE_SSL = False
 ####################### XML TEST GENERATOR #######################
 
 TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.XMLTestRunner'
+
+######################MEDIA ROOT####################################
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

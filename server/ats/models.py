@@ -2,12 +2,13 @@ from django.db import models
 
 from authemail.models import EmailUserManager, EmailAbstractUser
 
-# class MyUser(EmailAbstractUser):
+import os
     
 
 # Create your models here.
 class User(EmailAbstractUser):
     "The user that are part of the ATS."
+    is_setup = models.BooleanField(default=False)
     objects = EmailUserManager()
 
 
@@ -46,7 +47,7 @@ class NotificationType(models.Model):
 class Organization(models.Model):
     "The organization that are using the ATS."
     org_id = models.AutoField(primary_key=True)
-    org_name = models.CharField(max_length=64, unique=True, null = False)
+    org_name = models.CharField(max_length=64, null = False)
 
 class Recruiter(models.Model):
     "Recruiter that are part of the organization."
@@ -68,7 +69,8 @@ class Job(models.Model):
     job_id = models.AutoField(primary_key=True)
     creater_id = models.ForeignKey(Recruiter, on_delete=models.CASCADE, null = False, to_field='recruiter_id')
     job_title = models.CharField(max_length=64, null = False)
-    overview = models.CharField(max_length = 5000)
+    job_description = models.TextField(null = False)
+    tags = models.CharField(max_length=256, null = True, default="Software Enginneering")
     work_site = models.CharField(max_length=64, null = False)
     work_type = models.CharField(max_length=64, null = False)
     is_open = models.BooleanField(null = False)
@@ -109,10 +111,9 @@ class ProfileScore(models.Model):
     "The score of the candidate's profile."
     profile_score_id = models.AutoField(primary_key=True)
     resume_score = models.IntegerField(null = False)
-    relevance_score = models.IntegerField(null = False)
     candidate_application_id = models.ForeignKey("CandidateApplication", on_delete=models.CASCADE, null = False)
 
-import os
+
 def resume_filename(instance, filename):
     _, ext = os.path.splitext(filename)
     return f'resumes/{instance.candidate_id}{ext}'

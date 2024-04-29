@@ -5,7 +5,7 @@ from .views import AccountTypeViewSet, NotificationViewSet, \
 NotificationTypeViewSet, RecruiterViewSet, OrganizationViewSet, \
 CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, \
 JobScreenInterviewViewSet, ProfileScoreViewSet, CandidateApplicationViewSet, \
-CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet
+CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet, CreateCandidateAPIView
 
 from .views import CandidateApplicationDetailView
 
@@ -36,4 +36,5 @@ urlpatterns = [
     # bootstrapping authentication: powerful, but not the focus of this project
     path('api/accounts/', include('authemail.urls')),
     path('api/candidate_applications_detail/<int:pk>/', CandidateApplicationDetailView.as_view(), name='candidate_application_detail'),
+    path('api/create-candidate/', CreateCandidateAPIView.as_view(), name='create_candidate'),
 ]

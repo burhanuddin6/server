@@ -1,0 +1,252 @@
+{
+              "bi_grams": "[Software Engineer, Engineer Job, Job Description, Description Template, skilled software, software engineer, excellent software, software development, development team, company Duties, directing software, software system, system validation, testing methods, software programming, programming initiatives, working closely, crossfunctional departments, communicate project, project statuses, computer science, science software, software engineering, related field, software engineering, software development, development experience, experience preferably, related field, Software Engineer, Engineer Responsibilities, directing software, software system, system validation, testing methods, software programming, programming initiatives, Working closely, crossfunctional departments, communicate project, project statuses, Analyzing data, effectively coordinate, new systems, existing systems, software development, development lifecycle, Monitoring system, system performance, Communicating key, key project, project data, team members, building cohesion, executing project, project plans, Applying mathematics, problemsolving initiatives, Applying best, best practices, standard operating, operating procedures, Creating innovative, innovative solutions, technical needs, Testing new, new software, fixing bugs, Software Engineer, Engineer Requirements, computer science, science software, software engineering, related field, software engineering, software development, development experience, experience preferably, related field, Handson programming, programming experience, relevant languages, relevant tool, tool suites, Strong written, verbal communication, interpersonal skills, Creative problemsolving, problemsolving skills, Experience managing, software development, development lifecycle, prioritize activities, deliver projects, Experience working, business partners, comprehensive understanding, computer science, science concepts, Excellent coding, coding skills, Extensive knowledge, agile methodologies, Strong teambuilding, teambuilding skills]",
+              "clean_data": "Software Engineer Job Description Template\r\nWe are looking for a skilled software engineer who along with our excellent software development team will be responsible for working on projects that are currently being developed on by our company Duties will include but are not limited to developing and directing software system validation and testing methods as well as directing our software programming initiatives You will also be working closely with clients and crossfunctional departments to communicate project statuses and proposals\r\nA bachelor's degree in computer science software engineering or another related field is required You will also need at least five to seven years of software engineering or software development experience preferably in a related field to be successful in this role\r\nSoftware Engineer Responsibilities\r\nDeveloping and directing software system validation and testing methods\r\nDirecting our software programming initiatives\r\nOverseeing the development of documentation\r\nWorking closely with clients and crossfunctional departments to communicate project statuses and proposals\r\nAnalyzing data to effectively coordinate the installation of new systems or the modification of existing systems\r\nManaging the software development lifecycle\r\nMonitoring system performance\r\nCommunicating key project data to team members and building cohesion among teams\r\nDeveloping and executing project plans\r\nApplying mathematics and statistics to problemsolving initiatives\r\nApplying best practices and standard operating procedures\r\nCreating innovative solutions to meet our company\u2019s technical needs\r\nTesting new software and fixing bugs\r\nShaping the future of our systems\r\nSoftware Engineer Requirements\r\nA bachelor's degree in computer science software engineering or another related field\r\n5 to 7 years of software engineering or software development experience preferably in a related field\r\nHandson programming experience using relevant languages\r\nExperience using relevant tool suites\r\nStrong written and verbal communication and interpersonal skills\r\nCreative problemsolving skills\r\nExperience managing the software development lifecycle\r\nThe ability to prioritize activities and deliver projects on time and within budget\r\nExperience working with clients and business partners\r\nA comprehensive understanding of computer science concepts\r\nExcellent coding skills\r\nExtensive knowledge of agile methodologies\r\nStrong teambuilding skills\r\nThe ability to travel as necessary",
+              "entities": [
+                            "Software Engineer Requirements",
+                            "Handson",
+                            "Software Engineer Job Description Template"
+              ],
+              "extracted_keywords": [
+                            "Software",
+                            "Engineer",
+                            "Job",
+                            "Description",
+                            "Template",
+                            "software",
+                            "engineer",
+                            "software",
+                            "development",
+                            "team",
+                            "projects",
+                            "company",
+                            "Duties",
+                            "software",
+                            "system",
+                            "validation",
+                            "testing",
+                            "methods",
+                            "software",
+                            "programming",
+                            "initiatives",
+                            "clients",
+                            "departments",
+                            "project",
+                            "statuses",
+                            "proposals",
+                            "bachelor",
+                            "degree",
+                            "computer",
+                            "science",
+                            "software",
+                            "engineering",
+                            "field",
+                            "years",
+                            "software",
+                            "engineering",
+                            "software",
+                            "development",
+                            "experience",
+                            "field",
+                            "role",
+                            "Software",
+                            "Engineer",
+                            "Responsibilities",
+                            "software",
+                            "system",
+                            "validation",
+                            "testing",
+                            "methods",
+                            "software",
+                            "programming",
+                            "initiatives",
+                            "development",
+                            "documentation",
+                            "clients",
+                            "departments",
+                            "project",
+                            "statuses",
+                            "proposals",
+                            "data",
+                            "installation",
+                            "systems",
+                            "modification",
+                            "systems",
+                            "software",
+                            "development",
+                            "lifecycle",
+                            "Monitoring",
+                            "system",
+                            "performance",
+                            "project",
+                            "data",
+                            "team",
+                            "members",
+                            "cohesion",
+                            "teams",
+                            "project",
+                            "plans",
+                            "mathematics",
+                            "statistics",
+                            "initiatives",
+                            "practices",
+                            "operating",
+                            "procedures",
+                            "solutions",
+                            "company",
+                            "needs",
+                            "software",
+                            "bugs",
+                            "future",
+                            "systems",
+                            "Software",
+                            "Engineer",
+                            "Requirements",
+                            "bachelor",
+                            "degree",
+                            "computer",
+                            "science",
+                            "software",
+                            "engineering",
+                            "field",
+                            "years",
+                            "software",
+                            "engineering",
+                            "software",
+                            "development",
+                            "experience",
+                            "field",
+                            "Handson",
+                            "programming",
+                            "experience",
+                            "languages",
+                            "Experience",
+                            "tool",
+                            "suites",
+                            "Strong",
+                            "communication",
+                            "skills",
+                            "skills",
+                            "Experience",
+                            "software",
+                            "development",
+                            "lifecycle",
+                            "ability",
+                            "activities",
+                            "projects",
+                            "time",
+                            "budget",
+                            "Experience",
+                            "clients",
+                            "business",
+                            "partners",
+                            "understanding",
+                            "computer",
+                            "science",
+                            "concepts",
+                            "skills",
+                            "knowledge",
+                            "methodologies",
+                            "teambuilding",
+                            "ability"
+              ],
+              "job_desc_data": "Software Engineer Job Description Template\r\nWe are looking for a skilled software engineer who, along with our excellent software development team, will be responsible for working on projects that are currently being developed on by our company. Duties will include but are not limited to developing and directing software system validation and testing methods, as well as directing our software programming initiatives. You will also be working closely with clients and cross-functional departments to communicate project statuses and proposals.\r\nA bachelor's degree in computer science, software engineering, or another related field is required. You will also need at least five to seven years of software engineering or software development experience, preferably in a related field to be successful in this role.\r\nSoftware Engineer Responsibilities:\r\nDeveloping and directing software system validation and testing methods.\r\nDirecting our software programming initiatives\r\nOverseeing the development of documentation.\r\nWorking closely with clients and cross-functional departments to communicate project statuses and proposals.\r\nAnalyzing data to effectively coordinate the installation of new systems or the modification of existing systems.\r\nManaging the software development lifecycle.\r\nMonitoring system performance.\r\nCommunicating key project data to team members and building cohesion among teams.\r\nDeveloping and executing project plans.\r\nApplying mathematics and statistics to problem-solving initiatives.\r\nApplying best practices and standard operating procedures.\r\nCreating innovative solutions to meet our company\u2019s technical needs.\r\nTesting new software and fixing bugs.\r\nShaping the future of our systems.\r\nSoftware Engineer Requirements:\r\nA bachelor's degree in computer science, software engineering, or another related field.\r\n5 to 7 years of software engineering or software development experience, preferably in a related field.\r\nHands-on programming experience using relevant languages.\r\nExperience using relevant tool suites.\r\nStrong written and verbal communication and interpersonal skills.\r\nCreative problem-solving skills.\r\nExperience managing the software development lifecycle.\r\nThe ability to prioritize activities and deliver projects on time and within budget.\r\nExperience working with clients and business partners.\r\nA comprehensive understanding of computer science concepts.\r\nExcellent coding skills.\r\nExtensive knowledge of agile methodologies.\r\nStrong team-building skills.\r\nThe ability to travel as necessary.",
+              "keyterms": [
+                            [
+                                          "computer science software engineering",
+                                          0.39424454510682577
+                            ],
+                            [
+                                          "software system validation",
+                                          0.08109609682826788
+                            ],
+                            [
+                                          "software programming initiative",
+                                          0.07664674818376191
+                            ],
+                            [
+                                          "Software Engineer",
+                                          0.06869758728266534
+                            ],
+                            [
+                                          "software development experience",
+                                          0.041902374681366705
+                            ],
+                            [
+                                          "related field",
+                                          0.023466495713670873
+                            ],
+                            [
+                                          "software development lifecycle",
+                                          0.022808083733403418
+                            ],
+                            [
+                                          "testing method",
+                                          0.022799446854461405
+                            ],
+                            [
+                                          "project",
+                                          0.018563007111681323
+                            ],
+                            [
+                                          "crossfunctional department",
+                                          0.01836681183206207
+                            ],
+                            [
+                                          "project status",
+                                          0.01823679749866259
+                            ],
+                            [
+                                          "team",
+                                          0.010572862344776716
+                            ],
+                            [
+                                          "excellent",
+                                          0.010034626939641786
+                            ],
+                            [
+                                          "client",
+                                          0.009370561577088422
+                            ],
+                            [
+                                          "company",
+                                          0.008297629391239701
+                            ],
+                            [
+                                          "bachelor",
+                                          0.006239023460280618
+                            ],
+                            [
+                                          "degree",
+                                          0.006212355860132394
+                            ],
+                            [
+                                          "year",
+                                          0.005198795618384152
+                            ],
+                            [
+                                          "proposal",
+                                          0.0049757547894154
+                            ],
+                            [
+                                          "new",
+                                          0.004145897873228685
+                            ]
+              ],
+              "pos_frequencies": {
+                            "ADJ": 30,
+                            "ADP": 30,
+                            "ADV": 11,
+                            "AUX": 12,
+                            "CCONJ": 24,
+                            "DET": 17,
+                            "NOUN": 130,
+                            "NUM": 4,
+                            "PART": 14,
+                            "PRON": 11,
+                            "PROPN": 13,
+                            "SPACE": 32,
+                            "VERB": 42
+              },
+              "tri_grams": "[Software Engineer Job, Engineer Job Description, Job Description Template, skilled software engineer, excellent software development, software development team, responsible for working, working on projects, currently being developed, Duties will include, limited to developing, developing and directing, directing software system, software system validation, validation and testing, directing our software, software programming initiatives, closely with clients, clients and crossfunctional, departments to communicate, communicate project statuses, statuses and proposals, bachelor's degree, degree in computer, computer science software, science software engineering, field is required, years of software, engineering or software, software development experience, development experience preferably, Software Engineer Responsibilities, Developing and directing, directing software system, software system validation, validation and testing, Directing our software, software programming initiatives, Overseeing the development, development of documentation, closely with clients, clients and crossfunctional, departments to communicate, communicate project statuses, statuses and proposals, data to effectively, coordinate the installation, installation of new, modification of existing, Managing the software, software development lifecycle, Monitoring system performance, Communicating key project, key project data, data to team, members and building, cohesion among teams, Developing and executing, executing project plans, mathematics and statistics, statistics to problemsolving, Applying best practices, practices and standard, standard operating procedures, Creating innovative solutions, solutions to meet, meet our company, company\u2019s technical, Testing new software, software and fixing, Shaping the future, Software Engineer Requirements, bachelor's degree, degree in computer, computer science software, science software engineering, years of software, engineering or software, software development experience, development experience preferably, Handson programming experience, experience using relevant, Experience using relevant, relevant tool suites, written and verbal, communication and interpersonal, Creative problemsolving skills, managing the software, software development lifecycle, ability to prioritize, activities and deliver, projects on time, working with clients, clients and business, understanding of computer, computer science concepts, Excellent coding skills, knowledge of agile, Strong teambuilding skills, ability to travel, travel as necessary]",
+              "unique_id": "e56d2756-c30f-470b-bcb3-405ff316f453"
+}

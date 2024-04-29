@@ -1,0 +1,231 @@
+{
+              "bi_grams": "[passionate Software, Software Engineer, design develop, install software, software solutions, Software Engineer, Engineer responsibilities, responsibilities include, include gathering, gathering user, user requirements, requirements defining, defining system, system functionality, writing code, languages like, like Java, Java Ruby, NET programming, programming languages, languages eg, eg C++, ideal candidates, software development, development life, life cycle, cycle SDLC, preliminary system, system analysis, Software Engineer, build highquality, highquality innovative, fully performing, performing software, coding standards, technical design, software development, development life, life cycle, cycle SDLCDevelop, SDLCDevelop flowcharts, flowcharts layouts, identify requirements, solutionsWrite welldesigned, welldesigned testable, testable codeProduce, codeProduce specifications, determine operational, operational feasibilityIntegrate, feasibilityIntegrate software, software components, fully functional, functional software, software systemDevelop, systemDevelop software, software verification, verification plans, quality assurance, assurance proceduresDocument, maintain software, software functionalityTroubleshoot, functionalityTroubleshoot debug, upgrade existing, existing systemsDeploy, systemsDeploy programs, evaluate user, user feedbackComply, project plans, industry standardsEnsure, standardsEnsure software, latest features, Proven work, work experience, Software Engineer, Software DeveloperExperience, DeveloperExperience designing, designing interactive, interactive applicationsAbility, develop software, Java Ruby, Rails C++, programming languagesExcellent, languagesExcellent knowledge, relational databases, databases SQL, ORM technologies, technologies JPA2, JPA2 HibernateExperience, HibernateExperience developing, developing web, web applications, popular web, web framework, framework JSF, JSF Wicket, Wicket GWT, GWT Spring, Spring MVCExperience, testdriven developmentProficiency, software engineering, engineering toolsAbility, document requirements, specificationsBSc degree, Computer Science, Science Engineering, relevant field]",
+              "clean_data": "We are looking for a passionate Software Engineer to design develop and install software solutions\r\nSoftware Engineer responsibilities include gathering user requirements defining system functionality and writing code in various languages like Java Ruby on Rails or NET programming languages eg C++ or JScriptNET Our ideal candidates are familiar with the software development life cycle SDLC from preliminary system analysis to tests and deployment\r\nUltimately the role of the Software Engineer is to build highquality innovative and fully performing software that complies with coding standards and technical design\r\nResponsibilities\r\nExecute full software development life cycle SDLCDevelop flowcharts layouts and documentation to identify requirements and solutionsWrite welldesigned testable codeProduce specifications and determine operational feasibilityIntegrate software components into a fully functional software systemDevelop software verification plans and quality assurance proceduresDocument and maintain software functionalityTroubleshoot debug and upgrade existing systemsDeploy programs and evaluate user feedbackComply with project plans and industry standardsEnsure software is updated with latest features\r\nRequirements and skills\r\nProven work experience as a Software Engineer or Software DeveloperExperience designing interactive applicationsAbility to develop software in Java Ruby on Rails C++ or other programming languagesExcellent knowledge of relational databases SQL and ORM technologies JPA2 HibernateExperience developing web applications using at least one popular web framework JSF Wicket GWT Spring MVCExperience with testdriven developmentProficiency in software engineering toolsAbility to document requirements and specificationsBSc degree in Computer Science Engineering or relevant field",
+              "entities": [
+                            "HibernateExperience",
+                            "ORM",
+                            "SQL",
+                            "JSF Wicket",
+                            "C++",
+                            "the Software Engineer",
+                            "Computer Science Engineering",
+                            "Java Ruby on Rails",
+                            "Software Engineer"
+              ],
+              "extracted_keywords": [
+                            "Software",
+                            "Engineer",
+                            "software",
+                            "solutions",
+                            "Software",
+                            "Engineer",
+                            "responsibilities",
+                            "user",
+                            "requirements",
+                            "system",
+                            "functionality",
+                            "code",
+                            "languages",
+                            "Java",
+                            "Ruby",
+                            "Rails",
+                            "NET",
+                            "programming",
+                            "languages",
+                            "C++",
+                            "JScriptNET",
+                            "candidates",
+                            "software",
+                            "development",
+                            "life",
+                            "cycle",
+                            "SDLC",
+                            "system",
+                            "analysis",
+                            "tests",
+                            "deployment",
+                            "role",
+                            "Software",
+                            "Engineer",
+                            "highquality",
+                            "software",
+                            "standards",
+                            "design",
+                            "Responsibilities",
+                            "software",
+                            "development",
+                            "life",
+                            "cycle",
+                            "SDLCDevelop",
+                            "layouts",
+                            "documentation",
+                            "requirements",
+                            "solutionsWrite",
+                            "codeProduce",
+                            "specifications",
+                            "feasibilityIntegrate",
+                            "software",
+                            "components",
+                            "software",
+                            "systemDevelop",
+                            "software",
+                            "verification",
+                            "plans",
+                            "quality",
+                            "assurance",
+                            "proceduresDocument",
+                            "software",
+                            "systemsDeploy",
+                            "programs",
+                            "user",
+                            "project",
+                            "plans",
+                            "industry",
+                            "standardsEnsure",
+                            "software",
+                            "features",
+                            "Requirements",
+                            "skills",
+                            "work",
+                            "experience",
+                            "Software",
+                            "Engineer",
+                            "Software",
+                            "DeveloperExperience",
+                            "applicationsAbility",
+                            "software",
+                            "Java",
+                            "Ruby",
+                            "Rails",
+                            "C++",
+                            "programming",
+                            "knowledge",
+                            "databases",
+                            "SQL",
+                            "ORM",
+                            "technologies",
+                            "JPA2",
+                            "HibernateExperience",
+                            "web",
+                            "applications",
+                            "web",
+                            "framework",
+                            "JSF",
+                            "Wicket",
+                            "GWT",
+                            "Spring",
+                            "MVCExperience",
+                            "developmentProficiency",
+                            "software",
+                            "engineering",
+                            "toolsAbility",
+                            "document",
+                            "requirements",
+                            "specificationsBSc",
+                            "degree",
+                            "Computer",
+                            "Science",
+                            "Engineering",
+                            "field"
+              ],
+              "job_desc_data": "We are looking for a passionate Software Engineer to design, develop and install software solutions.\r\nSoftware Engineer responsibilities include gathering user requirements, defining system functionality and writing code in various languages, like Java, Ruby on Rails or .NET programming languages (e.g. C++ or JScript.NET.) Our ideal candidates are familiar with the software development life cycle (SDLC) from preliminary system analysis to tests and deployment.\r\nUltimately, the role of the Software Engineer is to build high-quality, innovative and fully performing software that complies with coding standards and technical design.\r\nResponsibilities\r\nExecute full software development life cycle (SDLC)Develop flowcharts, layouts and documentation to identify requirements and solutionsWrite well-designed, testable codeProduce specifications and determine operational feasibilityIntegrate software components into a fully functional software systemDevelop software verification plans and quality assurance proceduresDocument and maintain software functionalityTroubleshoot, debug and upgrade existing systemsDeploy programs and evaluate user feedbackComply with project plans and industry standardsEnsure software is updated with latest features\r\nRequirements and skills\r\nProven work experience as a Software Engineer or Software DeveloperExperience designing interactive applicationsAbility to develop software in Java, Ruby on Rails, C++ or other programming languagesExcellent knowledge of relational databases, SQL and ORM technologies (JPA2, Hibernate)Experience developing web applications using at least one popular web framework (JSF, Wicket, GWT, Spring MVC)Experience with test-driven developmentProficiency in software engineering toolsAbility to document requirements and specificationsBSc degree in Computer Science, Engineering or relevant field",
+              "keyterms": [
+                            [
+                                          "software development life cycle",
+                                          0.4027956647002983
+                            ],
+                            [
+                                          "Software Engineer",
+                                          0.16982183971902648
+                            ],
+                            [
+                                          "Java Ruby",
+                                          0.05526366771102668
+                            ],
+                            [
+                                          "requirement",
+                                          0.03265733378087738
+                            ],
+                            [
+                                          "user",
+                                          0.014962412594456912
+                            ],
+                            [
+                                          "responsibility",
+                                          0.013994817609247756
+                            ],
+                            [
+                                          "Rails",
+                                          0.011708918450222209
+                            ],
+                            [
+                                          "programming",
+                                          0.01138682257676956
+                            ],
+                            [
+                                          "C++",
+                                          0.011272410111981216
+                            ],
+                            [
+                                          "language",
+                                          0.006248364069205306
+                            ],
+                            [
+                                          "candidate",
+                                          0.0058457630281083285
+                            ],
+                            [
+                                          "JScriptNET",
+                                          0.0058039496566067595
+                            ],
+                            [
+                                          "familiar",
+                                          0.005791868888410564
+                            ],
+                            [
+                                          "ideal",
+                                          0.005749830307728928
+                            ],
+                            [
+                                          "preliminary",
+                                          0.005239267326968031
+                            ],
+                            [
+                                          "analysis",
+                                          0.005215758269498456
+                            ],
+                            [
+                                          "plan",
+                                          0.0051414722850962255
+                            ],
+                            [
+                                          "deployment",
+                                          0.005011159194187165
+                            ],
+                            [
+                                          "role",
+                                          0.004841497218619317
+                            ],
+                            [
+                                          "innovative",
+                                          0.004546715813878567
+                            ]
+              ],
+              "pos_frequencies": {
+                            "ADJ": 18,
+                            "ADP": 19,
+                            "ADV": 6,
+                            "AUX": 4,
+                            "CCONJ": 21,
+                            "DET": 6,
+                            "NOUN": 77,
+                            "NUM": 1,
+                            "PART": 5,
+                            "PRON": 3,
+                            "PROPN": 38,
+                            "SPACE": 6,
+                            "VERB": 30
+              },
+              "tri_grams": "[passionate Software Engineer, Engineer to design, develop and install, install software solutions, Software Engineer responsibilities, Engineer responsibilities include, responsibilities include gathering, include gathering user, gathering user requirements, user requirements defining, requirements defining system, defining system functionality, functionality and writing, languages like Java, like Java Ruby, Ruby on Rails, Rails or NET, NET programming languages, programming languages eg, languages eg C++, C++ or JScriptNET, JScriptNET Our ideal, candidates are familiar, software development life, development life cycle, life cycle SDLC, SDLC from preliminary, preliminary system analysis, analysis to tests, tests and deployment, Ultimately the role, build highquality innovative, innovative and fully, fully performing software, software that complies, complies with coding, standards and technical, Execute full software, software development life, development life cycle, life cycle SDLCDevelop, cycle SDLCDevelop flowcharts, SDLCDevelop flowcharts layouts, layouts and documentation, documentation to identify, requirements and solutionsWrite, solutionsWrite welldesigned testable, welldesigned testable codeProduce, testable codeProduce specifications, specifications and determine, determine operational feasibilityIntegrate, operational feasibilityIntegrate software, feasibilityIntegrate software components, fully functional software, functional software systemDevelop, software systemDevelop software, systemDevelop software verification, software verification plans, plans and quality, quality assurance proceduresDocument, proceduresDocument and maintain, maintain software functionalityTroubleshoot, software functionalityTroubleshoot debug, debug and upgrade, upgrade existing systemsDeploy, existing systemsDeploy programs, programs and evaluate, evaluate user feedbackComply, feedbackComply with project, plans and industry, industry standardsEnsure software, software is updated, updated with latest, Requirements and skills, Proven work experience, Engineer or Software, Software DeveloperExperience designing, DeveloperExperience designing interactive, designing interactive applicationsAbility, applicationsAbility to develop, software in Java, Ruby on Rails, programming languagesExcellent knowledge, knowledge of relational, relational databases SQL, SQL and ORM, ORM technologies JPA2, technologies JPA2 HibernateExperience, JPA2 HibernateExperience developing, HibernateExperience developing web, developing web applications, popular web framework, web framework JSF, framework JSF Wicket, JSF Wicket GWT, Wicket GWT Spring, GWT Spring MVCExperience, MVCExperience with testdriven, developmentProficiency in software, software engineering toolsAbility, toolsAbility to document, requirements and specificationsBSc, degree in Computer, Computer Science Engineering, Engineering or relevant]",
+              "unique_id": "092e0aef-9436-4fde-920e-7d9c4655562d"
+}

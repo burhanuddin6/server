@@ -3,9 +3,10 @@ from rest_framework.routers import DefaultRouter
 from django.contrib.auth import views as auth_views
 from .views import AccountTypeViewSet, NotificationViewSet, \
 NotificationTypeViewSet, RecruiterViewSet, OrganizationViewSet, \
-CandidateViewSet, SalaryViewSet, JobsViewSet, JobScreenViewSet, \
+SalaryViewSet, JobsViewSet, JobScreenViewSet, \
 JobScreenInterviewViewSet, ProfileScoreViewSet, CandidateApplicationViewSet, \
-CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet, CreateCandidateAPIView
+CandidateJobScreenRelationViewSet, CandidateInterviewViewSet, RemarkViewSet, \
+CreateCandidateAPIView, CandidateListView
 
 from .views import CandidateApplicationDetailView
 
@@ -16,7 +17,6 @@ router.register(r'notifications', NotificationViewSet)
 router.register(r'notification_types', NotificationTypeViewSet)
 router.register(r'recruiters', RecruiterViewSet)
 router.register(r'organizations', OrganizationViewSet)
-router.register(r'candidates', CandidateViewSet)
 router.register(r'salaries', SalaryViewSet)
 router.register(r'jobs', JobsViewSet)
 router.register(r'job_screens', JobScreenViewSet)
@@ -37,4 +37,5 @@ urlpatterns = [
     path('api/accounts/', include('authemail.urls')),
     path('api/candidate_applications_detail/<int:pk>/', CandidateApplicationDetailView.as_view(), name='candidate_application_detail'),
     path('api/create-candidate/', CreateCandidateAPIView.as_view(), name='create_candidate'),
+    path('candidates/', CandidateListView.as_view(), name='candidate-list'),
 ]

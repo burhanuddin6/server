@@ -69,7 +69,7 @@ class Job(models.Model):
     job_id = models.AutoField(primary_key=True)
     creater_id = models.ForeignKey(Recruiter, on_delete=models.CASCADE, null = False, to_field='recruiter_id')
     job_title = models.CharField(max_length=64, null = False)
-    job_description = models.TextField(null = False)
+    job_description = models.TextField(null = True)
     tags = models.CharField(max_length=256, null = True, default="Software Enginneering")
     work_site = models.CharField(max_length=64, null = False)
     work_type = models.CharField(max_length=64, null = False)

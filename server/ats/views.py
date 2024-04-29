@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import generics
+
 
 from .models import AccountType, Notification, NotificationType, \
 Recruiter, Organization, Candidate, Salary, Job, JobScreen, \
@@ -62,10 +64,10 @@ class OrganizationViewSet(viewsets.ModelViewSet):
     queryset = Organization.objects.all().order_by('org_id')
     serializer_class = OrganizationSerializer
 
-class CandidateViewSet(viewsets.ModelViewSet):
-    '''Default viewset for Candidate model.'''
-    queryset = Candidate.objects.all().order_by('candidate_id')
-    serializer_class = CandidateSerializer   
+# class CandidateViewSet(viewsets.ModelViewSet):
+#     '''Default viewset for Candidate model.'''
+#     queryset = Candidate.objects.all().order_by('candidate_id')
+#     serializer_class = CandidateSerializer   
 
 class SalaryViewSet(viewsets.ModelViewSet):
     '''Default viewset for Salary model.'''
@@ -111,8 +113,10 @@ class JobsViewSet(viewsets.ModelViewSet):
         import os
         job_json = read_json(os.path.join(settings.MEDIA_ROOT, 'job_descriptions', str(instance_id) + '.json'))
         tags = job_json['extracted_keywords']
+        job_description = job_json['job_desc_data']
         job_instance = Job.objects.get(job_id=instance_id)
         job_instance.tags = tags
+        job_instance.job_description = job_description
         job_instance.save()
         return Response(instance.data, status=status.HTTP_201_CREATED)
 
@@ -193,3 +197,39 @@ class CreateCandidateAPIView(APIView):
             'profile_score': profile_score_data
         }
         return Response(response_data, status=status.HTTP_201_CREATED)
+    
+class CandidateListView(APIView):
+    def get(self, request):
+        # Get data from each table
+        candidates = Candidate.objects.all()
+        applications = CandidateApplication.objects.all()
+        scores = ProfileScore.objects.all()
+
+        # check if job_id is provided
+        job_id = request.query_params.get('job_id')
+        if job_id:
+            applications = applications.filter(job_id=job_id)
+        
+        # join the querysets 
+        merged_data = []
+        for application in applications:
+            candidate = candidates.get(candidate_id=application.candidate_id.pk)
+            score = scores.get(candidate_application_id=application)
+            candidate_data = CandidateSerializer(candidate).data
+            application_data = CandidateApplicationSerializer(application).data
+            score_data = ProfileScoreSerializer(score).data
+            merged_data.append({
+                'candidate_id': candidate_data['candidate_id'],
+                'first_name': candidate_data['first_name'],
+                'last_name': candidate_data['last_name'],
+                'email': candidate_data['email'],
+                'country': candidate_data['country'],
+                'phone': candidate_data['phone'],
+                'linkedin_url': candidate_data['linkedin_url'],
+                'application_id': application_data['application_id'],
+                'job_id': application_data['job_id'],
+                'resume_file': str(application_data['resume_file']),
+                'profile_score_id': score_data['profile_score_id'],
+                'resume_score': score_data['resume_score'],
+            })
+        return Response(merged_data)

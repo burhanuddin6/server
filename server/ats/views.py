@@ -16,7 +16,7 @@ NotificationTypeSerializer, RecruiterSerializer, OrganizationSerializer, \
 CandidateSerializer, SalarySerializer, JobSerializer, JobScreenSerializer, \
 JobScreenInterviewSerializer, ProfileScoreSerializer, \
 CandidateApplicationSerializer, CandidateJobScreenRelationSerializer, \
-CandidateInterviewSerializer, RemarkSerializer
+CandidateInterviewSerializer, RemarkSerializer, CustomCandidateSerializer, CustomJobSerializer, CustomCandidateApplicationSerializer
 
 from .models import CandidateApplication
 from .serializer import CandidateApplicationSerializer
@@ -34,9 +34,18 @@ from pypdf import PdfReader
 
 class CandidateApplicationDetailView(APIView):
     def get(self, request, pk, format=None):
-        application = get_object_or_404(CandidateApplication, pk=pk)
-        serializer = CandidateApplicationSerializer(application)
+        candidate = get_object_or_404(Candidate, pk=pk)
+        serializer = CustomCandidateSerializer(candidate)
         return Response(serializer.data)
+     
+    def put(self, request, pk, format=None):
+        application = get_object_or_404(CandidateApplication, pk=pk)
+        serializer = CustomCandidateApplicationSerializer(application, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+     
 
 class AccountTypeViewSet(viewsets.ModelViewSet):
     '''Default viewset for AccountType model.'''

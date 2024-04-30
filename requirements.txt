@@ -27,3 +27,7 @@ typing_extensions==4.11.0
 unittest-xml-reporting==3.2.0
 urllib3==2.2.1
 xmlrunner==1.7.7
+spacy
+pypdf
+en-core-web-md==3.7.1
+textacy
